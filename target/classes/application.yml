@@ -1,0 +1,35 @@
+server:
+  port: 9001
+
+
+
+spring:
+  datasource:
+    username: root
+    password: ZXCVBNM.
+    url: jdbc:mysql://101.35.49.194:3306/jizhang?useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #邮箱服务
+  mail:
+    host: smtp.qq.com
+    username: 3194867951@qq.com
+    password: amosazkhohrcddcd
+    default-encoding: UTF-8
+    from: ${spring.mail.username}
+    protocol: smtp
+  application:
+    name: jizhang
+
+  redis:
+    host: 101.35.49.194
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
