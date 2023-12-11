@@ -1,20 +1,18 @@
 server:
-  port: 9001
-
-
+  port: 8080
 
 spring:
   datasource:
     username: root
-    password: ZXCVBNM.
-    url: jdbc:mysql://101.35.49.194:3306/jizhang?useSSL=false&serverTimezone=GMT%2B8
+    password: C896186CEF006EDD34361918E5E6D446
+    url: jdbc:mysql://127.0.0.1:3306/jizhang?useSSL=false&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   #邮箱服务
   mail:
     host: smtp.qq.com
-    username: 3194867951@qq.com
-    password: amosazkhohrcddcd
+    username: twentyue@qq.com
+    password: ityfazccegdgdfji
     default-encoding: UTF-8
     from: ${spring.mail.username}
     protocol: smtp
@@ -22,7 +20,7 @@ spring:
     name: jizhang
 
   redis:
-    host: 101.35.49.194
+    host: 127.0.0.1
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

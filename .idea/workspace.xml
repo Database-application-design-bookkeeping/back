@@ -1,11 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: add Dockerfile">
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: some detail">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/component/MailUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/component/ScheduledTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/SaTokenConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/ExpectionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/ExpenseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/IncomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/AccountDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/CategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/ExpectionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/ExpenseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/IncomeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/AccountVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpectionVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseTotalVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeTotalVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/LoginVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/LoginVoByEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/MailDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/UserNameVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/UserVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/AccountEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/CategoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/ExpectionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/ExpenseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/IncomeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/UserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/ExpectionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/ExpenseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/IncomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/AccountServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/CategoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/ExpectionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/ExpenseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/IncomeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant$ScheduleStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/HttpStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/PageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/RRException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/SQLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AccountDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AccountDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CategoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpectionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +103,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\java_install\maven3.6.3\apache-maven-3.6.3\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../java_install/maven3.6.3/apache-maven-3.6.3" />
         <option name="useMavenConfig" value="true" />
-        <option name="userSettingsFile" value="E:\java_install\maven3.6.3\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -67,7 +143,8 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "5344639bfe830e477e5dd1ae806ae894",
     "vue.rearranger.settings.migration": "true"
   },
@@ -77,13 +154,38 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Maven.jizhangpro [install]">
+    <configuration name="jizhangpro [install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="jizhangpro" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.managexpr.jizhang.App" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hardews.jizhang.App" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.managexpr.jizhang.*" />
+          <option name="PATTERN" value="com.hardews.jizhang.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,7 +234,7 @@
       <workItem from="1686456838138" duration="132000" />
       <workItem from="1689580696158" duration="18000" />
       <workItem from="1701659897877" duration="206000" />
-      <workItem from="1702255094269" duration="7121000" />
+      <workItem from="1702255094269" duration="8241000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -155,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702261244661</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: some detail">
+      <created>1702262650409</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702262650409</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +288,8 @@
     <MESSAGE value="feat: add version 1.0" />
     <MESSAGE value="feat: update to version 2.0, change more is setting" />
     <MESSAGE value="feat: add Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add Dockerfile" />
+    <MESSAGE value="fix: some detail" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: some detail" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
