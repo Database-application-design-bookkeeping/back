@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: mysql connection info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: mysql connection info" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +180,7 @@
       <workItem from="1689580696158" duration="18000" />
       <workItem from="1701659897877" duration="206000" />
       <workItem from="1702255094269" duration="26718000" />
-      <workItem from="1702306176745" duration="1086000" />
+      <workItem from="1702306176745" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -275,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702306483995</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update: mysql connection info">
+      <created>1702307408083</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702307408083</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

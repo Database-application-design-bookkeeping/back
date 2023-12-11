@@ -5,7 +5,7 @@ spring:
   datasource:
     username: root
     password: lmh123
-    url: jdbc:mysql://8.217.35.45:3306/jizhang?autoReconnect=true&amp&failOverReadOnly=false&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://8.130.31.247:3306/jizhang?autoReconnect=true&amp&failOverReadOnly=false&useSSL=false&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   #邮箱服务
@@ -20,7 +20,7 @@ spring:
     name: jizhang
 
   redis:
-    host: 8.217.35.45
+    host: 8.130.31.247
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
