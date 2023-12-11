@@ -2,8 +2,6 @@ package com.hardews.jizhang.service.impl;
 
 
 
-
-import cn.dev33.satoken.stp.StpUtil;
 import com.hardews.jizhang.dao.IncomeDao;
 import com.hardews.jizhang.dto.IncomeDto;
 import com.hardews.jizhang.dto.IncomeTotalVo;
@@ -12,6 +10,7 @@ import com.hardews.jizhang.entity.AccountEntity;
 import com.hardews.jizhang.entity.CategoryEntity;
 import com.hardews.jizhang.service.AccountService;
 import com.hardews.jizhang.service.CategoryService;
+import com.hardews.jizhang.utils.JwtPayloadHolder;
 import com.hardews.jizhang.utils.PageUtils;
 import com.hardews.jizhang.utils.Query;
 import org.springframework.beans.BeanUtils;
@@ -57,7 +56,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         BeanUtils.copyProperties(incomeDto,incomeEntity);
 
         //获取用户
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
         incomeEntity.setUserId(id);
         incomeEntity.setCreateTime(new Date());
 
@@ -74,7 +73,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByDay() {
 
         //用户id
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(id);
 
@@ -84,7 +83,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByWeek() {
         //用户id
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(id);
 
@@ -94,7 +93,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByMonth() {
         //用户id
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(id);
 
@@ -107,7 +106,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
 
         List<IncomeVo> incomeVos = incomeEntities.stream().map(incomeEntity -> {
             //用户id
-            Long id = Long.valueOf(StpUtil.getLoginId().toString());
+            Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
 
             IncomeVo incomeVo = new IncomeVo();
             incomeVo.setAmount(incomeEntity.getAmount());

@@ -24,7 +24,5 @@ public interface UserService extends IService<UserEntity> {
     R sendCode(String email);
 
     R updateUser(UserVo user);
-
-    void logout();
 }
 

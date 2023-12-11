@@ -23,7 +23,6 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/info/{id}")
-
     public R info(@PathVariable("id") Long id){
 		UserEntity user = userService.getById(id);
         return R.ok().put("user", user);
@@ -31,7 +30,6 @@ public class UserController {
 
     @ApiOperation("注册用户")
     @PostMapping("/register")
-
     public R save(@RequestBody @Valid UserVo user){
 		return userService.register(user);
     }
@@ -58,11 +56,4 @@ public class UserController {
     public R sendCode(@RequestParam String email){
         return userService.sendCode(email);
     }
-
-    @GetMapping("/logout")
-    public R logout(){
-        userService.logout();
-        return R.ok("退出成功");
-    }
-
 }

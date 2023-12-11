@@ -4,16 +4,14 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.hardews.jizhang.dao.UserDao;
 import com.hardews.jizhang.dto.*;
 import com.hardews.jizhang.component.MailUtils;
-import com.hardews.jizhang.dto.*;
-import com.hardews.jizhang.utils.PageUtils;
-import com.hardews.jizhang.utils.Query;
-import com.hardews.jizhang.utils.R;
+import com.hardews.jizhang.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -92,22 +90,19 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
     public R login(LoginVo loginVo) {
         //判空
         if(StringUtils.isEmpty(loginVo.getUsername())){
-            return R.error(400,"用户名不能为空");
+            return R.ok("用户名不能为空");
         }
         if (StringUtils.isEmpty(loginVo.getPassword())){
-            return R.error(400,"密码不能为空");
+            return R.ok("密码不能为空");
         }
 
         UserEntity user = this.getOne(new QueryWrapper<UserEntity>().eq("username", loginVo.getUsername()));
 
         if (DigestUtils.md5DigestAsHex(loginVo.getPassword().getBytes(StandardCharsets.UTF_8)).equals(user.getPassword())){
-            StpUtil.login(user.getId());
-            UserNameVo userNameVo = new UserNameVo();
-            userNameVo.setUsername(user.getUsername());
-            return R.ok("登录成功").put("data",userNameVo);
+            return generateToken(user);
         }
 
-        return R.error(400,"用户名或密码错误");
+        return R.ok("用户名或密码错误");
     }
 
     @Override
@@ -134,14 +129,16 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         if (ObjectUtils.isEmpty(user)){
             return R.error(400,"不存在此用户");
         }
-        StpUtil.login(user.getId());
-        UserNameVo userNameVo = new UserNameVo();
-        userNameVo.setUsername(user.getUsername());
-        return R.ok("登录成功").put("data",userNameVo);
+
+        return generateToken(user);
     }
 
     @Override
     public R sendCode(String email) {
+        UserEntity user = this.getOne(new QueryWrapper<UserEntity>().eq("email", email));
+        if (ObjectUtils.isEmpty(user)){
+            return R.ok("不存在此用户");
+        }
 
         int code = (int) ((Math.random() * 9 + 1) * 100000);
         MailDto mailDto = new MailDto();
@@ -156,8 +153,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
     @Override
     public R updateUser(UserVo userVo) {
-        //获取当前用户id
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        // 获取当前用户id
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
         UserEntity userEntity = new UserEntity();
         if (ObjectUtils.isEmpty(userVo)){
             return R.error(400,"参数不能为空");
@@ -177,9 +174,13 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         return R.ok("修改成功");
     }
 
-    @Override
-    public void logout() {
-        StpUtil.logout();
-    }
+    private R generateToken(@org.jetbrains.annotations.NotNull UserEntity user) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("username", user.getUsername());
+        payload.put("id", user.getId().toString());
+        payload.put("email", user.getEmail());
 
+        String token = Jwt.getToken(payload);
+        return R.ok("登录成功").put("data", token);
+    }
 }

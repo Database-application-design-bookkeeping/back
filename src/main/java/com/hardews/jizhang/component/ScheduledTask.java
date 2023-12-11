@@ -6,11 +6,11 @@ import com.hardews.jizhang.dto.ExpenseVo;
 import com.hardews.jizhang.dto.MailDto;
 import com.hardews.jizhang.dto.*;
 import com.hardews.jizhang.entity.CategoryEntity;
-import com.hardews.jizhang.entity.ExpectationEntity;
+import com.hardews.jizhang.entity.ExceptionEntity;
 import com.hardews.jizhang.entity.ExpenseEntity;
 import com.hardews.jizhang.entity.UserEntity;
 import com.hardews.jizhang.service.CategoryService;
-import com.hardews.jizhang.service.ExpectationService;
+import com.hardews.jizhang.service.ExceptionService;
 import com.hardews.jizhang.service.ExpenseService;
 import com.hardews.jizhang.service.UserService;
 import com.hardews.jizhang.service.impl.ExpenseServiceImpl;
@@ -31,7 +31,7 @@ public class ScheduledTask {
     private ExpenseServiceImpl expenseServiceImpl;
 
     @Autowired
-    private ExpectationService expectationService;
+    private ExceptionService exceptionService;
 
     @Autowired
     private MailUtils mailUtils;
@@ -53,11 +53,11 @@ public class ScheduledTask {
     @Scheduled(cron = "30 51 23 * * ?")
     public void scheduledTask(){
         List<Long> ids = new ArrayList<>();
-        for (ExpectationEntity expectationEntity : expectationService.list()) {
-            ids.add(expectationEntity.getUserId());
+        for (ExceptionEntity exceptionEntity : exceptionService.list()) {
+            ids.add(exceptionEntity.getUserId());
         }
         for (Long id : ids) {
-            ExpectationEntity expectationEntity = expectationService.getOne(new QueryWrapper<ExpectationEntity>().eq("user_id", id));
+            ExceptionEntity exceptionEntity = exceptionService.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
             List<ExpenseEntity> expenseEntity = expenseDao.selectExpenseByMonth(id);
 
 
@@ -89,7 +89,7 @@ public class ScheduledTask {
 
 
             UserEntity user = userService.getById(id);
-            if (amount < (expectationEntity.getAmount() + 500)) {
+            if (amount < (exceptionEntity.getAmount() + 500)) {
 
                 MailDto mailDto = new MailDto();
                 mailDto.setRecipient(user.getEmail());

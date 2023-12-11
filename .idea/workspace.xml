@@ -7,88 +7,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: some detail">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: Dockerfile">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/component/Verify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExceptionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/utils/Jwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/utils/JwtPayloadHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/component/ScheduledTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/component/ScheduledTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/config/SaTokenConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/ExpectationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/ExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/ExpectationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/ExceptionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dto/ExpectationVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dto/ExceptionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/entity/ExpectationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/entity/ExceptionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/exception/GlobalExpectationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/ExpectationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/ExceptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExpectationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExpenseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExpenseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExpectationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExpectationDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/component/MailUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/component/ScheduledTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/SaTokenConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/AccountController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/CategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/ExpectionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/ExpenseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/IncomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/AccountDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/CategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/ExpectionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/ExpenseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/IncomeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/AccountVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpectionVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseTotalVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/ExpenseVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeTotalVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/IncomeVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/LoginVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/LoginVoByEmail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/MailDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/UserNameVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/dto/UserVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/AccountEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/CategoryEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/ExpectionEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/ExpenseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/IncomeEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/entity/UserEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/AccountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/CategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/ExpectionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/ExpenseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/IncomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/AccountServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/CategoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/ExpectionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/ExpenseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/IncomeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant$MenuType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant$ScheduleStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Constant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/HttpStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/PageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/RRException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/managexpr/jizhang/utils/SQLFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AccountDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AccountDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CategoryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpectionDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/component/ScheduledTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/component/ScheduledTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/config/SaTokenConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/ExpectationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/ExpectationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/ExpectationVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/entity/ExpectationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/exception/GlobalExpectationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/ExpectationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/AccountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/ExpectationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/ExpenseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/ExpenseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpectationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ExpectationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,7 +93,9 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="2PzyvOhkPq8orPNQF2FRDDanp2Y" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -131,7 +110,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "C:/Users/Administrator/Desktop/jizhangpro",
@@ -154,7 +135,16 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Maven.jizhangpro [install]">
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.hardews.jizhang.component" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR 应用程序.jizhangpro-1.0-SNAPSHOT.jar">
+    <configuration name="jizhangpro-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="jizhangpro [install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -195,6 +185,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR 应用程序.jizhangpro-1.0-SNAPSHOT.jar" />
         <item itemvalue="Spring Boot.App" />
       </list>
     </recent_temporary>
@@ -234,7 +225,7 @@
       <workItem from="1686456838138" duration="132000" />
       <workItem from="1689580696158" duration="18000" />
       <workItem from="1701659897877" duration="206000" />
-      <workItem from="1702255094269" duration="8241000" />
+      <workItem from="1702255094269" duration="21647000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -264,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702262650409</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update: rebuild jar">
+      <created>1702263519383</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702263519383</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update: Dockerfile">
+      <created>1702263625679</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702263625679</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +294,9 @@
     <MESSAGE value="feat: update to version 2.0, change more is setting" />
     <MESSAGE value="feat: add Dockerfile" />
     <MESSAGE value="fix: some detail" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: some detail" />
+    <MESSAGE value="update: rebuild jar" />
+    <MESSAGE value="update: Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: Dockerfile" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

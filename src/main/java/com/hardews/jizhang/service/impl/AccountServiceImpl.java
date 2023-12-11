@@ -2,11 +2,11 @@ package com.hardews.jizhang.service.impl;
 
 
 
-import cn.dev33.satoken.stp.StpUtil;
 import com.hardews.jizhang.dao.AccountDao;
 import com.hardews.jizhang.dto.AccountVo;
 import com.hardews.jizhang.entity.UserEntity;
 import com.hardews.jizhang.service.UserService;
+import com.hardews.jizhang.utils.JwtPayloadHolder;
 import com.hardews.jizhang.utils.PageUtils;
 import com.hardews.jizhang.utils.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class AccountServiceImpl extends ServiceImpl<AccountDao, AccountEntity> i
     @Override
     public AccountVo getInfo() {
         //获取当前登录用户id
-        Long id = Long.valueOf(StpUtil.getLoginId().toString());
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
         UserEntity user = userService.getById(id);
         AccountVo accountVo = new AccountVo();
         accountVo.setUsername(user.getUsername());
