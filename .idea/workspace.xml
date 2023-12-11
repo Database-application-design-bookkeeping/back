@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: update to version 2.0, change more is setting">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: add Dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +132,7 @@
       <workItem from="1686456838138" duration="132000" />
       <workItem from="1689580696158" duration="18000" />
       <workItem from="1701659897877" duration="206000" />
-      <workItem from="1702255094269" duration="6128000" />
+      <workItem from="1702255094269" duration="7121000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -149,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702260681252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add Dockerfile">
+      <created>1702261244661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702261244661</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +178,8 @@
     </ignored-roots>
     <MESSAGE value="feat: add version 1.0" />
     <MESSAGE value="feat: update to version 2.0, change more is setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update to version 2.0, change more is setting" />
+    <MESSAGE value="feat: add Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Dockerfile" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

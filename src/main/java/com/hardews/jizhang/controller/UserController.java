@@ -54,7 +54,7 @@ public class UserController {
     }
 
     @ApiOperation("发送验证码")
-    @GetMapping("/sendCode")
+    @GetMapping("/code")
     public R sendCode(@RequestParam String email){
         return userService.sendCode(email);
     }
