@@ -14,24 +14,29 @@ public class ExpenseController {
     @Autowired
     private ExpenseService expenseService;
 
-    @GetMapping("/info/day")
-    public R infoByDay(){
+    @GetMapping("/day")
+    public R day(){
 		ExpenseTotalVo expense = expenseService.getExpenseByDay();
         return R.ok("查询成功").put("data", expense);
     }
 
-    @GetMapping("/info/week")
-    public R infoByWeek(){
+    @GetMapping("/week")
+    public R week(){
         ExpenseTotalVo expense = expenseService.getExpenseByWeek();
         return R.ok("查询成功").put("data", expense);
     }
 
-    @GetMapping("/info/month")
-    public R infoByMonth(){
+    @GetMapping("/month")
+    public R month(){
         ExpenseTotalVo expense = expenseService.getExpenseByMonth();
         return R.ok("查询成功").put("data", expense);
     }
 
+    @GetMapping("/total")
+    public R total(){
+        ExpenseTotalVo expense = expenseService.getExpenseTotal();
+        return R.ok("查询成功").put("data", expense);
+    }
     @RequestMapping("/save")
     public R save(@RequestBody ExpenseDto expenseDto){
 		expenseService.saveExp(expenseDto);

@@ -35,5 +35,10 @@
         WHERE DATE_FORMAT( create_time,'%Y-%m') = DATE_FORMAT(CURDATE(),'%Y-%m') and user_id=#{userId};
     </select>
 
+    <select id="selectExpenseTotal" resultType="com.hardews.jizhang.entity.ExpenseEntity" resultMap="expenseMap">
+        SELECT *
+        FROM expense
+        WHERE user_id=#{userId};
+    </select>
 
 </mapper>

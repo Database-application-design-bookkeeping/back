@@ -15,21 +15,27 @@ public class IncomeController {
     @Autowired
     private IncomeService incomeService;
 
-    @GetMapping("/info/day")
-    public R infoByDay(){
+    @GetMapping("/day")
+    public R day(){
         IncomeTotalVo incomeTotalVos = incomeService.getIncomeByDay();
         return R.ok("查询成功").put("data", incomeTotalVos);
     }
 
-    @GetMapping("/info/week")
-    public R infoByWeek(){
+    @GetMapping("/week")
+    public R week(){
         IncomeTotalVo incomeTotalVos = incomeService.getIncomeByWeek();
         return R.ok("查询成功").put("data", incomeTotalVos);
     }
 
-    @GetMapping("/info/month")
-    public R infoByMonth(){
+    @GetMapping("/month")
+    public R month(){
         IncomeTotalVo incomeTotalVos = incomeService.getIncomeByMonth();
+        return R.ok("查询成功").put("data", incomeTotalVos);
+    }
+
+    @GetMapping("/total")
+    public R total(){
+        IncomeTotalVo incomeTotalVos = incomeService.getIncomeTotal();
         return R.ok("查询成功").put("data", incomeTotalVos);
     }
 

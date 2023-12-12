@@ -33,5 +33,11 @@
         WHERE DATE_FORMAT( create_time,'%Y-%m') = DATE_FORMAT(CURDATE(),'%Y-%m') and user_id=#{userId};
     </select>
 
+    <select id="selectIncomeTotal" resultType="com.hardews.jizhang.entity.IncomeEntity" resultMap="incomeMap">
+        SELECT *
+        FROM income
+        WHERE user_id=#{userId};
+    </select>
+
 
 </mapper>

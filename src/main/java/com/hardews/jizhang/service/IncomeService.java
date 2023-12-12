@@ -20,5 +20,7 @@ public interface IncomeService extends IService<IncomeEntity> {
     IncomeTotalVo getIncomeByWeek();
 
     IncomeTotalVo getIncomeByMonth();
+
+    IncomeTotalVo getIncomeTotal();
 }
 

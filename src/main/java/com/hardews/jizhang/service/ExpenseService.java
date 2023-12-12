@@ -23,5 +23,7 @@ public interface ExpenseService extends IService<ExpenseEntity> {
     ExpenseTotalVo getExpenseByWeek();
 
     ExpenseTotalVo getExpenseByMonth();
+
+    ExpenseTotalVo getExpenseTotal();
 }
 

@@ -16,4 +16,5 @@ public interface ExpenseDao extends BaseMapper<ExpenseEntity> {
 
     List<ExpenseEntity> selectExpenseByMonth(@Param("userId") Long userId);
 
+    List<ExpenseEntity> selectExpenseTotal(@Param("userId") Long userId);
 }

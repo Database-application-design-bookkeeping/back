@@ -16,4 +16,6 @@ public interface IncomeDao extends BaseMapper<IncomeEntity> {
 
     List<IncomeEntity> selectIncomeByWeek(@Param("userId") Long id);
 
+    List<IncomeEntity> selectIncomeTotal(@Param("userId") Long id);
+
 }

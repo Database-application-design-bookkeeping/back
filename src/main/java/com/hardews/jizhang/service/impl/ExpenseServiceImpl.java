@@ -116,6 +116,14 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
         return count(expenseEntity);
     }
 
+    @Override
+    public ExpenseTotalVo getExpenseTotal() {
+        //用户id
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
+        List<ExpenseEntity> expenseEntity = this.baseMapper.selectExpenseTotal(id);
+        return count(expenseEntity);
+    }
+
     //封装一个用来返回结果的函数
     public ExpenseTotalVo count(List<ExpenseEntity> expenseEntity){
         //总金额

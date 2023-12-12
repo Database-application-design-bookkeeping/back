@@ -101,6 +101,16 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         return count(incomeEntities);
     }
 
+    @Override
+    public IncomeTotalVo getIncomeTotal() {
+        //用户id
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
+
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeTotal(id);
+
+        return count(incomeEntities);
+    }
+
     public IncomeTotalVo count(List<IncomeEntity> incomeEntities){
 
         Long count = 0L;
