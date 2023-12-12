@@ -29,6 +29,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.hardews.jizhang.entity.IncomeEntity;
 import com.hardews.jizhang.service.IncomeService;
+import org.springframework.util.ObjectUtils;
 
 
 @Service("incomeService")
@@ -56,15 +57,29 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         BeanUtils.copyProperties(incomeDto,incomeEntity);
 
         //获取用户
-        Long id = JwtPayloadHolder.getClaims();
-        incomeEntity.setUserId(id);
+        long id = Long.parseLong(JwtPayloadHolder.getClaims().get("id").asString());
         incomeEntity.setCreateTime(new Date());
 
         AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
-        account.setBalance(account.getBalance()+incomeDto.getAmount());
-        account.setUpdateTime(new Date());
+        if (ObjectUtils.isEmpty(account)){
+            // 没有建记录
+            AccountEntity a = new AccountEntity();
+            a.setUserId(Math.toIntExact(id));
+            a.setBalance(incomeDto.getAmount());
+            a.setCreateTime(new Date());
+            a.setUpdateTime(new Date());
 
-        accountService.updateById(account);
+            accountService.save(a);
+
+            AccountEntity an = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
+            incomeEntity.setAccountId(Long.valueOf(an.getId()));
+        }else{
+            account.setBalance(account.getBalance()+incomeDto.getAmount());
+            account.setUpdateTime(new Date());
+
+            incomeEntity.setAccountId(Long.valueOf(account.getId()));
+            accountService.updateById(account);
+        }
 
         this.save(incomeEntity);
     }
@@ -73,7 +88,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByDay() {
 
         //用户id
-        Long id = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(id);
 
@@ -83,7 +98,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByWeek() {
         //用户id
-        Long id = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(id);
 
@@ -93,7 +108,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByMonth() {
         //用户id
-        Long id = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(id);
 
@@ -106,13 +121,13 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
 
         List<IncomeVo> incomeVos = incomeEntities.stream().map(incomeEntity -> {
             //用户id
-            Long id = JwtPayloadHolder.getClaims();
+            Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
 
             IncomeVo incomeVo = new IncomeVo();
             incomeVo.setAmount(incomeEntity.getAmount());
             incomeVo.setRemark(incomeEntity.getRemark());
             incomeVo.setCreateTime(incomeEntity.getCreateTime());
-            incomeVo.setInput_method(incomeEntity.getInput_method());
+            incomeVo.setInput_method(incomeEntity.getInputMethod());
 
             //获取分类名
             CategoryEntity category = categoryService.getById(incomeEntity.getCategoryId());

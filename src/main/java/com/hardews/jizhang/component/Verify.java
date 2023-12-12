@@ -30,8 +30,8 @@ public class Verify implements HandlerInterceptor {
             DecodedJWT verify = Jwt.verify(token);
             Map<String, Claim> payload = verify.getClaims();
             // 将负载信息存储在ThreadLocal中
-            System.out.println(payload.get("id").asLong());
-            JwtPayloadHolder.setClaims(payload.get("id").asLong());
+            System.out.println(payload);
+            JwtPayloadHolder.setClaims(payload);
             return true;
         } catch (Exception e) {
             // Token验证失败

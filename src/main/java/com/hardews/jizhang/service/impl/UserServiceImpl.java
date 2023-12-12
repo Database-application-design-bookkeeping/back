@@ -1,6 +1,7 @@
 package com.hardews.jizhang.service.impl;
 
 import cn.dev33.satoken.stp.StpUtil;
+import com.auth0.jwt.interfaces.Claim;
 import com.hardews.jizhang.dao.UserDao;
 import com.hardews.jizhang.dto.*;
 import com.hardews.jizhang.component.MailUtils;
@@ -115,6 +116,11 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
             return R.error(400,"验证码不能为空");
         }
 
+        UserEntity user = this.getOne(new QueryWrapper<UserEntity>().eq("email", loginVoByEmail.getEmail()));
+        if (ObjectUtils.isEmpty(user)){
+            return R.error(400,"不存在此用户");
+        }
+
         //从redis获取验证码
         String code_redis = redis.opsForValue().get(loginVoByEmail.getEmail());
         if (code_redis == null){
@@ -125,10 +131,6 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         }
 
         redis.delete(loginVoByEmail.getEmail());
-        UserEntity user = this.getOne(new QueryWrapper<UserEntity>().eq("email", loginVoByEmail.getEmail()));
-        if (ObjectUtils.isEmpty(user)){
-            return R.error(400,"不存在此用户");
-        }
 
         return generateToken(user);
     }
@@ -153,15 +155,20 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
     @Override
     public R updateUser(UserVo userVo) {
-        // 获取当前用户id
-        Long id = JwtPayloadHolder.getClaims();
-        UserEntity userEntity = new UserEntity();
         if (ObjectUtils.isEmpty(userVo)){
-            return R.error(400,"参数不能为空");
+            return R.error(403,"不合法的操作");
         }
-        if (!StringUtils.isEmpty(userVo.getUsername())){
-            userEntity.setUsername(userVo.getUsername());
+        // 获取当前用户id
+        Map<String, Claim> payload = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(payload.get("id").asString());
+        String username = payload.get("username").asString();
+
+        UserEntity userEntity = this.getOne(new QueryWrapper<UserEntity>().eq("username", username));
+        if (ObjectUtils.isEmpty(userEntity)){
+            return R.error(200, "无此用户");
         }
+
+        // 用户名不能被修改
         if (!StringUtils.isEmpty(userVo.getPassword())){
             userEntity.setPassword(DigestUtils.md5DigestAsHex(userVo.getPassword().getBytes()));
         }
@@ -170,6 +177,11 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         }
         userEntity.setUpdateTime(new Date());
         userEntity.setId(id);
+
+        // debug
+        System.out.print("update info: ");
+        System.out.println(userEntity);
+
         this.updateById(userEntity);
         return R.ok("修改成功");
     }

@@ -15,7 +15,7 @@ public class IncomeEntity implements Serializable {
 	@TableId
 	private Integer id;
 
-	private Long userId;
+	private Long accountId;
 
 	private Integer categoryId;
 
@@ -25,6 +25,8 @@ public class IncomeEntity implements Serializable {
 
 	private Date createTime;
 
-	private String input_method;
+	private Date updateTime;
+
+	private String inputMethod;
 
 }

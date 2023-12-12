@@ -40,7 +40,7 @@ public class AccountServiceImpl extends ServiceImpl<AccountDao, AccountEntity> i
     @Override
     public AccountVo getInfo() {
         //获取当前登录用户id
-        Long id = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
         UserEntity user = userService.getById(id);
         AccountVo accountVo = new AccountVo();
         accountVo.setUsername(user.getUsername());

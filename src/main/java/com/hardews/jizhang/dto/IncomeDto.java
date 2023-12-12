@@ -15,5 +15,5 @@ public class IncomeDto {
 
     private String remark;
 
-    private String input_method;
+    private String inputMethod;
 }
