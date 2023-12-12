@@ -7,20 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: exception func">
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: add total">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/ExpenseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/IncomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/IncomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/ExpenseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/ExpenseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/IncomeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/dao/IncomeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/ExpenseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/IncomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/IncomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExpenseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/ExpenseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExpenseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExpenseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/IncomeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IncomeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ExpenseDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/IncomeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/ExpenseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/ExpenseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/IncomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/IncomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/ExpenseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/ExpenseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/IncomeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/IncomeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/ExpenseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/ExpenseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/IncomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/IncomeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +191,7 @@
       <workItem from="1702255094269" duration="26718000" />
       <workItem from="1702306176745" duration="2335000" />
       <workItem from="1702339862061" duration="12342000" />
-      <workItem from="1702381009995" duration="2054000" />
+      <workItem from="1702381009995" duration="5198000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -387,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702382141111</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: add total">
+      <created>1702383160161</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702383160161</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +427,8 @@
     <MESSAGE value="fix: user table" />
     <MESSAGE value="fix: income get" />
     <MESSAGE value="fix: exception func" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: exception func" />
+    <MESSAGE value="feat: add total" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add total" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
