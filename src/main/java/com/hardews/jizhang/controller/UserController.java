@@ -1,8 +1,10 @@
 package com.hardews.jizhang.controller;
 
+import com.auth0.jwt.interfaces.Claim;
 import com.hardews.jizhang.dto.LoginVo;
 import com.hardews.jizhang.dto.LoginVoByEmail;
 import com.hardews.jizhang.dto.UserVo;
+import com.hardews.jizhang.utils.JwtPayloadHolder;
 import com.hardews.jizhang.utils.R;
 
 import io.swagger.annotations.Api;
@@ -14,6 +16,7 @@ import com.hardews.jizhang.entity.UserEntity;
 import com.hardews.jizhang.service.UserService;
 
 import javax.validation.Valid;
+import java.util.Map;
 
 @RestController
 @RequestMapping("jizhang/user")
@@ -22,9 +25,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
+    @RequestMapping("/info")
+    public R info(){
+        // 获取当前用户id
+        Map<String, Claim> payload = JwtPayloadHolder.getClaims();
+        Long id = Long.valueOf(payload.get("id").asString());
+
 		UserEntity user = userService.getById(id);
+        user.setPassword("");
         return R.ok().put("user", user);
     }
 
