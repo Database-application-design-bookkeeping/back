@@ -12,7 +12,7 @@
         <result property="remark" column="remark"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
-        <result property="output_method" column="output_method"/>
+        <result property="outputMethod" column="output_method"/>
     </resultMap>
 
     <select id="selectExpenseByDay" resultType="com.hardews.jizhang.entity.ExpenseEntity" resultMap="expenseMap">

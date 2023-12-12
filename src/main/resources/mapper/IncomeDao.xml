@@ -11,7 +11,7 @@
         <result property="amount" column="amount"/>
         <result property="remark" column="remark"/>
         <result property="createTime" column="create_time"/>
-        <result property="input_method" column="input_method"/>
+        <result property="inputMethod" column="input_method"/>
 
     </resultMap>
 
