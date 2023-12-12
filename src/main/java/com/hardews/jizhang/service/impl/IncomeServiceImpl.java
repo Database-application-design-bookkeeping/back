@@ -56,7 +56,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         BeanUtils.copyProperties(incomeDto,incomeEntity);
 
         //获取用户
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         incomeEntity.setUserId(id);
         incomeEntity.setCreateTime(new Date());
 
@@ -73,7 +73,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByDay() {
 
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(id);
 
@@ -83,7 +83,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByWeek() {
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(id);
 
@@ -93,7 +93,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     @Override
     public IncomeTotalVo getIncomeByMonth() {
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
 
         List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(id);
 
@@ -106,7 +106,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
 
         List<IncomeVo> incomeVos = incomeEntities.stream().map(incomeEntity -> {
             //用户id
-            Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+            Long id = JwtPayloadHolder.getClaims();
 
             IncomeVo incomeVo = new IncomeVo();
             incomeVo.setAmount(incomeEntity.getAmount());

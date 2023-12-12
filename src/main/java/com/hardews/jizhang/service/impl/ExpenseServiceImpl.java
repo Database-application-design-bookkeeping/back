@@ -58,7 +58,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
     @Override
     public ExpenseVo getExpense() {
         //获取用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
 
         ExpenseEntity expense = this.getOne(new QueryWrapper<ExpenseEntity>().eq("user_id", id));
 
@@ -76,7 +76,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
     public void saveExp(ExpenseDto expenseDto) {
 
         //获取用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
 
         ExpenseEntity expenseEntity = new ExpenseEntity();
         BeanUtils.copyProperties(expenseDto,expenseEntity);
@@ -97,7 +97,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
     public ExpenseTotalVo getExpenseByDay() {
 
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         List<ExpenseEntity> expenseEntity = this.baseMapper.selectExpenseByDay(id);
         return count(expenseEntity);
     }
@@ -105,7 +105,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
     @Override
     public ExpenseTotalVo getExpenseByWeek() {
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         List<ExpenseEntity> expenseEntity = this.baseMapper.selectExpenseByWeek(id);
         return count(expenseEntity);
     }
@@ -113,7 +113,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
     @Override
     public ExpenseTotalVo getExpenseByMonth() {
         //用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         List<ExpenseEntity> expenseEntity = this.baseMapper.selectExpenseByMonth(id);
         return count(expenseEntity);
     }
@@ -131,7 +131,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
             expenseVo.setOutput_method(expenseEn.getOutput_method());
 
             //获取用户id
-            Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+            Long id = JwtPayloadHolder.getClaims();
 
 //            //获取用户名
             UserEntity user = userService.getById(id);

@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: mysql connection info" />
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: roll back">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +182,8 @@
       <workItem from="1689580696158" duration="18000" />
       <workItem from="1701659897877" duration="206000" />
       <workItem from="1702255094269" duration="26718000" />
-      <workItem from="1702306176745" duration="1537000" />
+      <workItem from="1702306176745" duration="2335000" />
+      <workItem from="1702339862061" duration="977000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -280,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702307408083</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update: roll back">
+      <created>1702307979573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702307979573</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +320,8 @@
     <MESSAGE value="update: use jwt" />
     <MESSAGE value="fix: mysql connect way" />
     <MESSAGE value="update: mysql connection info" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: mysql connection info" />
+    <MESSAGE value="update: roll back" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: roll back" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

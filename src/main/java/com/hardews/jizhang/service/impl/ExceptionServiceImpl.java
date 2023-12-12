@@ -32,14 +32,14 @@ public class ExceptionServiceImpl extends ServiceImpl<ExceptionDao, ExceptionEnt
     @Override
     public void save(Long amount) {
         ExceptionEntity exceptionEntity = new ExceptionEntity();
-        exceptionEntity.setUserId(Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString()));
+        exceptionEntity.setUserId(JwtPayloadHolder.getClaims());
         exceptionEntity.setAmount(amount);
         this.save(exceptionEntity);
     }
 
     @Override
     public void updateException(Long amount) {
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         ExceptionEntity exceptionEntity = this.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
         exceptionEntity.setAmount(amount);
         this.updateById(exceptionEntity);
@@ -47,7 +47,7 @@ public class ExceptionServiceImpl extends ServiceImpl<ExceptionDao, ExceptionEnt
 
     @Override
     public ExceptionVo getInfo() {
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         ExceptionEntity exceptionEntity = this.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
         ExceptionVo exceptionVo = new ExceptionVo();
         exceptionVo.setAmount(exceptionEntity.getAmount());

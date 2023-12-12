@@ -154,7 +154,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
     @Override
     public R updateUser(UserVo userVo) {
         // 获取当前用户id
-        Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").toString());
+        Long id = JwtPayloadHolder.getClaims();
         UserEntity userEntity = new UserEntity();
         if (ObjectUtils.isEmpty(userVo)){
             return R.error(400,"参数不能为空");
