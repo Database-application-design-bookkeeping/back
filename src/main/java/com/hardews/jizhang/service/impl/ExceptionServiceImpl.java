@@ -46,6 +46,7 @@ public class ExceptionServiceImpl extends ServiceImpl<ExceptionDao, ExceptionEnt
         ExceptionEntity exceptionEntity = this.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
         if (ObjectUtils.isEmpty(exceptionEntity)){
             R.ok("没有期望信息");
+            return;
         }
         exceptionEntity.setAmount(amount);
         this.updateById(exceptionEntity);

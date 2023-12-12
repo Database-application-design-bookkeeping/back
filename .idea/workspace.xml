@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: income get">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" afterDir="false" />
-    </list>
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: income get" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +181,7 @@
       <workItem from="1701659897877" duration="206000" />
       <workItem from="1702255094269" duration="26718000" />
       <workItem from="1702306176745" duration="2335000" />
-      <workItem from="1702339862061" duration="10863000" />
+      <workItem from="1702339862061" duration="11238000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -343,7 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702351224483</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: income get">
+      <created>1702351425491</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702351425491</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix: income get">
+      <created>1702351577454</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702351577454</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
