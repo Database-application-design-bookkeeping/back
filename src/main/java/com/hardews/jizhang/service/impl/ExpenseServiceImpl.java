@@ -67,8 +67,6 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
         ExpenseVo expenseVo = new ExpenseVo();
         BeanUtils.copyProperties(expense,expenseVo);
 
-//        expenseVo.setUsername(user.getUsername());
-
         return expenseVo;
     }
 

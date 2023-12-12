@@ -2,9 +2,11 @@ package com.hardews.jizhang.service.impl;
 
 import com.hardews.jizhang.dao.ExceptionDao;
 import com.hardews.jizhang.dto.ExceptionVo;
+import com.hardews.jizhang.entity.AccountEntity;
 import com.hardews.jizhang.utils.JwtPayloadHolder;
 import com.hardews.jizhang.utils.PageUtils;
 import com.hardews.jizhang.utils.Query;
+import com.hardews.jizhang.utils.R;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -14,6 +16,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.hardews.jizhang.entity.ExceptionEntity;
 import com.hardews.jizhang.service.ExceptionService;
+import org.springframework.util.ObjectUtils;
 
 
 @Service("exceptionService")
@@ -41,6 +44,9 @@ public class ExceptionServiceImpl extends ServiceImpl<ExceptionDao, ExceptionEnt
     public void updateException(Long amount) {
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
         ExceptionEntity exceptionEntity = this.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
+        if (ObjectUtils.isEmpty(exceptionEntity)){
+            R.ok("没有期望信息");
+        }
         exceptionEntity.setAmount(amount);
         this.updateById(exceptionEntity);
     }
@@ -49,6 +55,9 @@ public class ExceptionServiceImpl extends ServiceImpl<ExceptionDao, ExceptionEnt
     public ExceptionVo getInfo() {
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
         ExceptionEntity exceptionEntity = this.getOne(new QueryWrapper<ExceptionEntity>().eq("user_id", id));
+        if (ObjectUtils.isEmpty(exceptionEntity)){
+            R.ok("没有期望信息");
+        }
         ExceptionVo exceptionVo = new ExceptionVo();
         exceptionVo.setAmount(exceptionEntity.getAmount());
         return exceptionVo;

@@ -5,6 +5,8 @@ import com.auth0.jwt.interfaces.Claim;
 import com.hardews.jizhang.dao.UserDao;
 import com.hardews.jizhang.dto.*;
 import com.hardews.jizhang.component.MailUtils;
+import com.hardews.jizhang.entity.AccountEntity;
+import com.hardews.jizhang.service.AccountService;
 import com.hardews.jizhang.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -37,6 +39,9 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
     @Autowired
     private MailUtils mailUtils;
+
+    @Autowired
+    private AccountService accountService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -84,6 +89,19 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
         this.save(user);
+
+        UserEntity u = this.getOne(new QueryWrapper<UserEntity>().eq("username", userVo.getUsername()));
+        if (ObjectUtils.isEmpty(u)){
+            return R.error(500, "系统错误");
+        }
+        AccountEntity account = new AccountEntity();
+        account.setUserId(Math.toIntExact(u.getId()));
+        account.setBalance(0L);
+        account.setCreateTime(new Date());
+        account.setUpdateTime(new Date());
+
+        accountService.save(account);
+
         return R.ok("注册成功");
     }
 

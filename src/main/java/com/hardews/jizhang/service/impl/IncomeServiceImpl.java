@@ -61,26 +61,11 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         incomeEntity.setCreateTime(new Date());
 
         AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
-        if (ObjectUtils.isEmpty(account)){
-            // 没有建记录
-            AccountEntity a = new AccountEntity();
-            a.setUserId(Math.toIntExact(id));
-            a.setBalance(incomeDto.getAmount());
-            a.setCreateTime(new Date());
-            a.setUpdateTime(new Date());
+        account.setBalance(account.getBalance()+incomeDto.getAmount());
+        account.setUpdateTime(new Date());
 
-            accountService.save(a);
-
-            AccountEntity an = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
-            incomeEntity.setAccountId(Long.valueOf(an.getId()));
-        }else{
-            account.setBalance(account.getBalance()+incomeDto.getAmount());
-            account.setUpdateTime(new Date());
-
-            incomeEntity.setAccountId(Long.valueOf(account.getId()));
-            accountService.updateById(account);
-        }
-
+        incomeEntity.setAccountId(Long.valueOf(account.getId()));
+        accountService.updateById(account);
         this.save(incomeEntity);
     }
 
