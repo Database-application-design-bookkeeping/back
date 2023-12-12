@@ -74,8 +74,9 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
 
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
+        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(id);
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(Long.valueOf(account.getId()));
 
         return count(incomeEntities);
     }
@@ -84,8 +85,9 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByWeek() {
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
+        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(id);
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(Long.valueOf(account.getId()));
 
         return count(incomeEntities);
     }
@@ -94,8 +96,9 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByMonth() {
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
+        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(id);
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(Long.valueOf(account.getId()));
 
         return count(incomeEntities);
     }
