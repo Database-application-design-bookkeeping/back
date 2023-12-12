@@ -10,10 +10,10 @@ import java.util.List;
 @Mapper
 public interface IncomeDao extends BaseMapper<IncomeEntity> {
 
-    List<IncomeEntity> selectIncomeByDay(@Param("userId") Long id);
+    List<IncomeEntity> selectIncomeByDay(@Param("accountId") Long id);
 
-    List<IncomeEntity> selectIncomeByMonth(@Param("userId") Long id);
+    List<IncomeEntity> selectIncomeByMonth(@Param("accountId") Long id);
 
-    List<IncomeEntity> selectIncomeByWeek(@Param("userId") Long id);
+    List<IncomeEntity> selectIncomeByWeek(@Param("accountId") Long id);
 
 }

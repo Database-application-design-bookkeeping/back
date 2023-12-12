@@ -7,8 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: user table">
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: income get">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/IncomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/IncomeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,7 @@
       <workItem from="1701659897877" duration="206000" />
       <workItem from="1702255094269" duration="26718000" />
       <workItem from="1702306176745" duration="2335000" />
-      <workItem from="1702339862061" duration="10221000" />
+      <workItem from="1702339862061" duration="10863000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -332,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702349962883</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix: income get">
+      <created>1702351224483</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702351224483</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +379,8 @@
     <MESSAGE value="fix: so many bug" />
     <MESSAGE value="fix: info get" />
     <MESSAGE value="fix: user table" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: user table" />
+    <MESSAGE value="fix: income get" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: income get" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
