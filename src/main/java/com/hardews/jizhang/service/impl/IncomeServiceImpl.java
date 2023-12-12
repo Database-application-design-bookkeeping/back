@@ -59,6 +59,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
         //获取用户
         long id = Long.parseLong(JwtPayloadHolder.getClaims().get("id").asString());
         incomeEntity.setCreateTime(new Date());
+        incomeEntity.setUserId(id);
 
         AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
         account.setBalance(account.getBalance()+incomeDto.getAmount());
@@ -74,9 +75,8 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
 
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
-        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(Long.valueOf(account.getId()));
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByDay(id);
 
         return count(incomeEntities);
     }
@@ -85,9 +85,8 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByWeek() {
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
-        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(Long.valueOf(account.getId()));
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByWeek(id);
 
         return count(incomeEntities);
     }
@@ -96,9 +95,8 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
     public IncomeTotalVo getIncomeByMonth() {
         //用户id
         Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());
-        AccountEntity account = accountService.getOne(new QueryWrapper<AccountEntity>().eq("user_id", id));
 
-        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(Long.valueOf(account.getId()));
+        List<IncomeEntity> incomeEntities = this.baseMapper.selectIncomeByMonth(id);
 
         return count(incomeEntities);
     }

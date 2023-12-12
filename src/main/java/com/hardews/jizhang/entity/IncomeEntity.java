@@ -17,6 +17,8 @@ public class IncomeEntity implements Serializable {
 
 	private Long accountId;
 
+	private Long userId;
+
 	private Integer categoryId;
 
 	private Long amount;
