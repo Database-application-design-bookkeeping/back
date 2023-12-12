@@ -25,6 +25,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // 用户信息
     @RequestMapping("/info")
     public R info(){
         // 获取当前用户id
@@ -32,6 +33,7 @@ public class UserController {
         Long id = Long.valueOf(payload.get("id").asString());
 
 		UserEntity user = userService.getById(id);
+        // 密码置空
         user.setPassword("");
         return R.ok().put("user", user);
     }

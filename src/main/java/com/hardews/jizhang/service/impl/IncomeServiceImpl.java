@@ -113,7 +113,7 @@ public class IncomeServiceImpl extends ServiceImpl<IncomeDao, IncomeEntity> impl
             incomeVo.setAmount(incomeEntity.getAmount());
             incomeVo.setRemark(incomeEntity.getRemark());
             incomeVo.setCreateTime(incomeEntity.getCreateTime());
-            incomeVo.setInput_method(incomeEntity.getInputMethod());
+            incomeVo.setInputMethod(incomeEntity.getInputMethod());
 
             //获取分类名
             CategoryEntity category = categoryService.getById(incomeEntity.getCategoryId());

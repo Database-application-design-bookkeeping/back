@@ -126,7 +126,7 @@ public class ExpenseServiceImpl extends ServiceImpl<ExpenseDao, ExpenseEntity> i
             ExpenseVo expenseVo = new ExpenseVo();
             expenseVo.setAmount(expenseEn.getAmount());
             expenseVo.setRemark(expenseEn.getRemark());
-            expenseVo.setOutput_method(expenseEn.getOutput_method());
+            expenseVo.setOutputMethod(expenseEn.getOutput_method());
 
             //获取用户id
             Long id = Long.valueOf(JwtPayloadHolder.getClaims().get("id").asString());

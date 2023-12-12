@@ -13,12 +13,8 @@ public class ExpenseDto {
 
     @NotEmpty
     private Integer categoryId;
-    /**
-     *
-     */
+
     private String remark;
-    /**
-     *
-     */
-    private String output_method;
+
+    private String outputMethod;
 }
