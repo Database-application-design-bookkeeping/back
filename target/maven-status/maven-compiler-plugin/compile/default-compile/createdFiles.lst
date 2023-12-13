@@ -1,2 +1,2 @@
-com\hardews\jizhang\config\MyCorsFilter.class
-com\hardews\jizhang\config\MyCorsFilter$1.class
+com\hardews\jizhang\config\CorsConfig.class
+com\hardews\jizhang\component\CorsFilter.class
