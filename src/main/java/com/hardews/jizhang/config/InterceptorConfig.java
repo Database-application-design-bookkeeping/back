@@ -1,5 +1,6 @@
 package com.hardews.jizhang.config;
 
+import com.hardews.jizhang.component.Cors;
 import com.hardews.jizhang.component.Verify;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -13,5 +14,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
         registry.addInterceptor(new Verify())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/jizhang/user/login","/jizhang/user/login/email","/jizhang/user/register", "/jizhang/user/code");
+
+        registry.addInterceptor(new Cors())
+                .addPathPatterns("/**");
     }
 }

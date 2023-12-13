@@ -4,7 +4,6 @@ C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\comp
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dao\AccountDao.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\config\SwaggerConfig.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\ExpenseTotalVo.java
-C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\config\GlobalCorsConfig.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\service\AccountService.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\service\impl\UserServiceImpl.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\service\impl\ExceptionServiceImpl.java
@@ -14,6 +13,7 @@ C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\enti
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\utils\JwtPayloadHolder.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\utils\Constant.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dao\IncomeDao.java
+C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\component\Cors.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\exception\GlobalExceptionHandler.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\IncomeVo.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\entity\ExceptionEntity.java
