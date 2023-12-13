@@ -21,7 +21,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
         //允许跨域访问资源定义
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")
+                .allowedOrigins("https://bookping.hardews.cn")
                 // 允许发送凭证: 前端如果配置改属性为true之后，则必须同步配置
                 .allowCredentials(true)
                 // 允许所有方法
