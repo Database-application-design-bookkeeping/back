@@ -23,7 +23,8 @@ spring:
     name: jizhang
 
   redis:
-    host: 8.130.31.247
+    host: 127.0.0.1
+    port: 6379
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
