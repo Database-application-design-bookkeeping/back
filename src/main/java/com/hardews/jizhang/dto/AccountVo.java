@@ -4,6 +4,9 @@ import lombok.Data;
 
 @Data
 public class AccountVo {
-    private String username;
-    private Long balance;
+    AccountBalanceVo accountBalanceVo;
+    AccountIncomeVo accountIncomeVo;
+    AccountExpenseVo accountExpenseVo;
 }
+
+
