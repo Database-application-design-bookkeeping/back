@@ -14,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -165,7 +166,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
         //放入redis
         redis.opsForValue().set(email, String.valueOf(code),2, TimeUnit.MINUTES);
-        return SendQQMailUtil.sendEmail(email);
+
+        return SendQQMailUtil.sendEmail(mailDto);
     }
 
     @Override

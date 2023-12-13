@@ -14,10 +14,12 @@ import com.hardews.jizhang.service.ExceptionService;
 import com.hardews.jizhang.service.ExpenseService;
 import com.hardews.jizhang.service.UserService;
 import com.hardews.jizhang.service.impl.ExpenseServiceImpl;
+import com.hardews.jizhang.utils.SendQQMailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import javax.mail.MessagingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,9 +36,6 @@ public class ScheduledTask {
     private ExceptionService exceptionService;
 
     @Autowired
-    private MailUtils mailUtils;
-
-    @Autowired
     private UserService userService;
 
     @Autowired
@@ -51,7 +50,7 @@ public class ScheduledTask {
      * 监测是否超过预期计划，超过发送短信提醒
      */
     @Scheduled(cron = "30 51 23 * * ?")
-    public void scheduledTask(){
+    public void scheduledTask() throws MessagingException {
         List<Long> ids = new ArrayList<>();
         for (ExceptionEntity exceptionEntity : exceptionService.list()) {
             ids.add(exceptionEntity.getUserId());
@@ -96,7 +95,7 @@ public class ScheduledTask {
                 mailDto.setSubject("邮箱提醒");
                 mailDto.setContent("你实际支出即将超出您的预期");
 
-                mailUtils.sendSimpleMail(mailDto);
+                SendQQMailUtil.sendEmail(mailDto);
             }
         }
     }
