@@ -7,16 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: add total">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/ExpenseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/ExpenseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/IncomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/IncomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/ExpenseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/ExpenseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/IncomeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dao/IncomeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/ExpenseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/ExpenseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/IncomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/IncomeService.class" afterDir="false" />
-    </list>
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="update: som class info" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +182,7 @@
       <workItem from="1702255094269" duration="26718000" />
       <workItem from="1702306176745" duration="2335000" />
       <workItem from="1702339862061" duration="12342000" />
-      <workItem from="1702381009995" duration="5198000" />
+      <workItem from="1702381009995" duration="5381000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -389,7 +380,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702383160161</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update: doc">
+      <created>1702386456312</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702386456312</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update: som class info">
+      <created>1702386470009</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702386470009</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +433,9 @@
     <MESSAGE value="fix: income get" />
     <MESSAGE value="fix: exception func" />
     <MESSAGE value="feat: add total" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add total" />
+    <MESSAGE value="update: doc" />
+    <MESSAGE value="update: som class info" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: som class info" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
