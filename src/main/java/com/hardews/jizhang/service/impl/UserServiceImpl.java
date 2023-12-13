@@ -1,10 +1,8 @@
 package com.hardews.jizhang.service.impl;
 
-import cn.dev33.satoken.stp.StpUtil;
 import com.auth0.jwt.interfaces.Claim;
 import com.hardews.jizhang.dao.UserDao;
 import com.hardews.jizhang.dto.*;
-import com.hardews.jizhang.component.MailUtils;
 import com.hardews.jizhang.entity.AccountEntity;
 import com.hardews.jizhang.service.AccountService;
 import com.hardews.jizhang.utils.*;
@@ -29,6 +27,8 @@ import org.springframework.util.DigestUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
+import javax.mail.MessagingException;
+
 
 @Service("userService")
 public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements UserService {
@@ -36,9 +36,6 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
     @Autowired
     private StringRedisTemplate redis;
-
-    @Autowired
-    private MailUtils mailUtils;
 
     @Autowired
     private AccountService accountService;
@@ -154,7 +151,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
     }
 
     @Override
-    public R sendCode(String email) {
+    public R sendCode(String email) throws MessagingException {
         UserEntity user = this.getOne(new QueryWrapper<UserEntity>().eq("email", email));
         if (ObjectUtils.isEmpty(user)){
             return R.ok("不存在此用户");
@@ -168,7 +165,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
 
         //放入redis
         redis.opsForValue().set(email, String.valueOf(code),2, TimeUnit.MINUTES);
-        return mailUtils.sendSimpleMail(mailDto);
+        return SendQQMailUtil.sendEmail(email);
     }
 
     @Override

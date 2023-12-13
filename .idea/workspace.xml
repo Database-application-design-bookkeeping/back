@@ -7,9 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="feat: add account info">
+    <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: mail">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/utils/SendQQMailUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/component/MailUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +199,7 @@
       <workItem from="1702381009995" duration="5381000" />
       <workItem from="1702433047761" duration="3414000" />
       <workItem from="1702437959856" duration="3391000" />
-      <workItem from="1702452513139" duration="6262000" />
+      <workItem from="1702452513139" duration="7002000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -498,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702473488149</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fix: redis connect">
+      <created>1702476731889</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1702476731889</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,8 +537,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="feat: add version 1.0" />
-    <MESSAGE value="feat: update to version 2.0, change more is setting" />
     <MESSAGE value="feat: add Dockerfile" />
     <MESSAGE value="fix: some detail" />
     <MESSAGE value="update: rebuild jar" />
@@ -544,7 +560,9 @@
     <MESSAGE value="update: Cors middleware" />
     <MESSAGE value="fix: Cors middleware" />
     <MESSAGE value="feat: add account info" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add account info" />
+    <MESSAGE value="fix: redis connect" />
+    <MESSAGE value="fix: mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: mail" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

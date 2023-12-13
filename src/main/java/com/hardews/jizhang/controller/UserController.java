@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import com.hardews.jizhang.entity.UserEntity;
 import com.hardews.jizhang.service.UserService;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
 import java.util.Map;
 
@@ -63,7 +64,7 @@ public class UserController {
 
     @ApiOperation("发送验证码")
     @GetMapping("/code")
-    public R sendCode(@RequestParam String email){
+    public R sendCode(@RequestParam String email) throws MessagingException {
         return userService.sendCode(email);
     }
 }
