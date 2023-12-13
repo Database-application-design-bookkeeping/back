@@ -44,7 +44,6 @@ C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\util
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\config\CorsConfig.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\utils\HttpStatus.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\ExceptionVo.java
-C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\component\MailUtils.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\entity\IncomeEntity.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\service\CategoryService.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\AccountExpenseVo.java
@@ -61,5 +60,6 @@ C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\cont
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\UserVo.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\utils\Jwt.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dao\UserDao.java
+C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\utils\SendQQMailUtil.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\config\InterceptorConfig.java
 C:\Users\Administrator\Desktop\jizhangpro\src\main\java\com\hardews\jizhang\dto\AccountIncomeVo.java

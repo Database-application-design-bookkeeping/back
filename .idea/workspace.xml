@@ -8,18 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffc81d26-d150-4824-96e7-7fc2552d0867" name="Changes" comment="fix: mail">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/utils/SendQQMailUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/component/MailUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hardews/jizhang/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/component/ScheduledTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/component/ScheduledTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountBalanceVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountBalanceVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountExpenseVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountExpenseVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountIncomeVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountIncomeVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/AccountVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/MailDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/dto/MailDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/AccountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/utils/SendQQMailUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hardews/jizhang/utils/SendQQMailUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jizhangpro-1.0-SNAPSHOT.jar.original" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +203,7 @@
       <workItem from="1702381009995" duration="5381000" />
       <workItem from="1702433047761" duration="3414000" />
       <workItem from="1702437959856" duration="3391000" />
-      <workItem from="1702452513139" duration="7002000" />
+      <workItem from="1702452513139" duration="7935000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add version 1.0">
       <created>1702257672995</created>
@@ -516,7 +520,28 @@
       <option name="project" value="LOCAL" />
       <updated>1702476731889</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix: mail">
+      <created>1702477485485</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1702477485485</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix: mail">
+      <created>1702477501969</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1702477501969</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fix: mail">
+      <created>1702478010701</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1702478010701</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
