@@ -97,9 +97,9 @@ public class AccountServiceImpl extends ServiceImpl<AccountDao, AccountEntity> i
         abv.setMonth(monthProfit);
         abv.setTotal(ProfitTotal);
 
-        accountVo.setAccountIncomeVo(aiv);
-        accountVo.setAccountExpenseVo(aev);
-        accountVo.setAccountBalanceVo(abv);
+        accountVo.setIncome(aiv);
+        accountVo.setExpense(aev);
+        accountVo.setBalance(abv);
 
         JwtPayloadHolder.clear();
         return accountVo;

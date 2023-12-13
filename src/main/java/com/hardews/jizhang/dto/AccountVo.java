@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class AccountVo {
-    AccountBalanceVo accountBalanceVo;
-    AccountIncomeVo accountIncomeVo;
-    AccountExpenseVo accountExpenseVo;
+    AccountBalanceVo balance;
+    AccountIncomeVo income;
+    AccountExpenseVo expense;
 }
 
 

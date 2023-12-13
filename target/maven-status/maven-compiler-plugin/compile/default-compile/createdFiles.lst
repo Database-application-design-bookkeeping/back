@@ -1,2 +1,5 @@
+com\hardews\jizhang\dto\AccountIncomeVo.class
+com\hardews\jizhang\dto\AccountExpenseVo.class
+com\hardews\jizhang\dto\AccountBalanceVo.class
 com\hardews\jizhang\config\CorsConfig.class
 com\hardews\jizhang\component\CorsFilter.class
